@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc tsc-alias",
+    "build": "tsc",
     "dev": "tsc-watch --onSuccess \"nodemon ./dist/index.js\"",
     "start": "npm run build && node dist/index.js",
     "debug": "export DEBUG=* && npm run start"

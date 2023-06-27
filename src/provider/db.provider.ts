@@ -6,7 +6,7 @@ const options = {
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 };
-async function QueryDB<T = any>(sql: string, params?: any): Promise<T> {
+async function QueryDB<T = any>(sql: string, params?: any[]): Promise<T> {
   const connection = await mysql.createConnection(options);
   const [rows] = await connection.execute(sql, params);
   return rows as any as T;
